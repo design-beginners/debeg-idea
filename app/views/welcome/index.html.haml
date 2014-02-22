@@ -1,0 +1,22 @@
+%h1 デザインビギナーズのアイデア帳
+%hr
+%p
+  デザインビギナーズのミートアップでやりたいことをたくさん集めるサイトです。やってみたいことがあったら気軽に追加してください！
+
+= form_for @idea do |f|
+  - if @idea.errors.any?
+    .alert.alert-danger
+      %ul
+        - @idea.errors.full_messages.each do |msg|
+          %li
+            = msg
+  .form-group
+    = f.text_field :title, class: 'form-control', placeholder: 'アイデア'
+  = f.submit 'アイデアを送信する', class: 'btn btn-success'
+
+%hr
+
+.list-group
+  - @ideas.each do |idea|
+    .list-group-item
+      = idea.title
