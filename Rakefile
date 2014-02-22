@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DebegNeta::Application.load_tasks
+DebegIdea::Application.load_tasks
