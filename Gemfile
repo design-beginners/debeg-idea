@@ -6,8 +6,8 @@ source 'https://rails-assets.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -52,9 +52,11 @@ gem 'erb2haml'
 gem 'therubyracer'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'dotenv-rails'
 end
 
 group :production do
+  gem 'pg'
   gem 'rails_12factor'
 end
