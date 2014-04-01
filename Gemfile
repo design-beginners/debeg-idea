@@ -54,6 +54,11 @@ gem 'therubyracer'
 group :development, :test do
   gem 'sqlite3'
   gem 'dotenv-rails'
+  gem 'pry'
+  gem 'pry-remote'
+  gem 'pry-byebug'
+  gem "binding_of_caller"
+  gem 'meta_request'
 end
 
 group :production do
