@@ -19,4 +19,4 @@
 .list-group
   - @ideas.each do |idea|
     .list-group-item
-      = idea.title
+      = link_to idea.title, idea

@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 class IdeasController < ApplicationController
+  def show
+    @idea = Idea.find(params[:id])
+    @comments = @idea.comments
+    @comment = Comment.new
+  end
+
   def create
     @idea = Idea.new(title: params[:idea][:title])
 

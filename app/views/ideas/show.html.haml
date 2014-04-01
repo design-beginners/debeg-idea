@@ -1,0 +1,22 @@
+%h1
+  = @idea.title
+
+%hr
+
+- if @comments.present?
+  .list-group
+    - @comments.select(&:persisted?).each do |comment|
+      .list-group-item
+        = comment.body
+
+= form_for [@idea, @comment] do |f|
+  - if @comment.errors.any?
+    .alert.alert-danger
+      %ul
+        - @comment.errors.full_messages.each do |msg|
+          %li
+            = msg
+  .form-group
+    = f.text_area :body, class: 'form-control', placeholder: 'コメント'
+  = f.submit 'コメントを送信する', class: 'btn btn-success'
+
