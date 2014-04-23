@@ -14,6 +14,8 @@ gem 'haml-rails'
 gem 'rails-assets-bootstrap'
 gem 'erb2haml'
 gem 'therubyracer'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'sqlite3'
