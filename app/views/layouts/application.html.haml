@@ -12,6 +12,12 @@
       .container
         .navbar-header
           = link_to 'Design Beginners', root_path, class: 'navbar-brand'
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            - if logged_in?
+              %li= link_to 'ログアウト', logout_path
+            - else
+              %li= link_to 'Twitterでログイン', '/auth/twitter'
     .container
       - if flash[:notice]
         .alert.alert-success
