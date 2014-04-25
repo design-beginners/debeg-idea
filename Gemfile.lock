@@ -147,6 +147,7 @@ GEM
     mini_portile (0.5.3)
     minitest (5.3.3)
     multi_json (1.9.2)
+    newrelic_rpm (3.8.0.218)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     oauth (0.4.7)
@@ -265,6 +266,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   meta_request
+  newrelic_rpm
   omniauth
   omniauth-twitter
   pg

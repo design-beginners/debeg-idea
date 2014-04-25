@@ -16,6 +16,7 @@ gem 'erb2haml'
 gem 'therubyracer'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
