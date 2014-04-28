@@ -11,22 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425125034) do
+ActiveRecord::Schema.define(version: 20140427143623) do
 
   create_table "comments", force: true do |t|
     t.integer  "idea_id"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "comments", ["idea_id"], name: "index_comments_on_idea_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "ideas", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "ideas", ["user_id"], name: "index_ideas_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "provider",   null: false
