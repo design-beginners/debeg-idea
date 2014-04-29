@@ -39,6 +39,7 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_rewinder'
+  gem 'launchy'
 end
 
 group :production do
