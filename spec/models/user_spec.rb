@@ -2,6 +2,8 @@
 require 'spec_helper'
 
 describe User do
+  it { should have_many(:ideas) }
+
   describe '.find_or_create_from_auth_hash' do
     let(:auth_hash) do
       {
