@@ -7,7 +7,11 @@
   .list-group
     - @comments.select(&:persisted?).each do |comment|
       .list-group-item
-        = comment.body
+        - if comment.user.try(:image_url)
+          = image_tag(comment.user.image_url, width: 30, height: 30, alt: comment.user.nickname, title: comment.user.nickname).html_safe
+          = comment.body
+        - else
+          = comment.body
 - if logged_in?
   = form_for [@idea, @comment] do |f|
     - if @comment.errors.any?
@@ -19,4 +23,7 @@
     .form-group
       = f.text_area :body, class: 'form-control', placeholder: 'コメント'
     = f.submit 'コメントを送信する', class: 'btn btn-success'
+- else
+  %p
+    コメントを追加するためには#{ link_to 'ログイン', '/auth/twitter' }が必要です。
 
