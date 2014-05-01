@@ -5,6 +5,8 @@ deploy:
   provider: heroku
   api_key:
     secure: XMsvlG8qX6DB5zoKEHFcHoUb1VGobc7qz3GuMcsecTjWtOFlc9r06YA9Nmgotk7yv+Bm5SkqxT71qbJI5jpZmdAEsul4p6WfZzBkLDNp2vM0P9z3b/NueteS1tR+/F9UpAssLJGAu7qY3mN28rFsPUD/Yl0kMbmLy68qLnb4EZU=
+  run:
+    - 'rake db:migrate'
   app: debeg-idea
   on:
     repo: design-beginners/debeg-idea
