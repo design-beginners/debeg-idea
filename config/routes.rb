@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :ideas, only: [:show, :create] do
     resources :comments, only: :create
   end
+
+  match '*path' => 'application#error404', via: :all
 end
