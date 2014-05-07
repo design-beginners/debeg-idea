@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'sessions#failure'
   get '/logout' => 'sessions#destroy', as: :logout
 
-  resources :ideas, only: [:show, :create] do
-    resources :comments, only: :create
+  concern :likable do
+    resources :likes, only: :create
+  end
+
+  resources :ideas, concerns: :likable, only: [:show, :create] do
+    resources :comments, concerns: :likable, only: :create
   end
 
   match '*path' => 'application#error404', via: :all

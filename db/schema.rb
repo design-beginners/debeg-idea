@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140507063631) do
   end
 
   add_index "likes", ["likable_id", "likable_type"], name: "index_likes_on_likable_id_and_likable_type"
+  add_index "likes", ["user_id", "likable_id", "likable_type"], name: "index_likes_on_user_id_and_likable_id_and_likable_type", unique: true
 
   create_table "users", force: true do |t|
     t.string   "provider",   null: false

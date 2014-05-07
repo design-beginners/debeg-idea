@@ -12,6 +12,13 @@
           = comment.body
         - else
           = comment.body
+        .pull-right
+          イイネ！: #{comment.likes.count}
+          - if logged_in? && comment.likes.exists?(user: current_user)
+            = link_to 'イイネ！済み', '#', class: 'btn btn-primary btn-sm disabled'
+          - elsif logged_in?
+            = link_to 'イイネ！', idea_comment_likes_path(@idea, comment), method: :post, remote: true, class: 'btn btn-primary btn-sm js-like'
+
 - if logged_in?
   = form_for [@idea, @comment] do |f|
     - if @comment.errors.any?
