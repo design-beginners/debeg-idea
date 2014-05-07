@@ -34,6 +34,10 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.4.1'
 end
 
+group :development do
+  gem 'quiet_assets'
+end
+
 group :test do
   gem 'shoulda-matchers', '~> 2.6.0'
   gem 'capybara'
