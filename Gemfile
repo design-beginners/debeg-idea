@@ -40,6 +40,7 @@ group :test do
   gem 'poltergeist'
   gem 'database_rewinder'
   gem 'launchy'
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :production do
