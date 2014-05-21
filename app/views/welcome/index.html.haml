@@ -3,20 +3,16 @@
   %p
     デザインビギナーズのミートアップでやりたいことをたくさん集めるサイトです。デザイン関連で勉強したいことを「アイデア」として追加して、参考になる情報(ブログのエントリや書籍の情報など)をコメントで追加します。
 
-- if logged_in?
-  = form_for @idea do |f|
-    - if @idea.errors.any?
-      .alert.alert-danger
-        %ul
-          - @idea.errors.full_messages.each do |msg|
-            %li
-              = msg
-    .form-group
-      = f.text_field :title, class: 'form-control', placeholder: 'アイデア'
-    = f.submit 'アイデアを送信する', class: 'btn btn-success'
-- else
-  %p
-    アイデアを追加するためには#{ link_to 'ログイン', '/auth/twitter' }が必要です。
+= form_for @idea do |f|
+  - if @idea.errors.any?
+    .alert.alert-danger
+      %ul
+        - @idea.errors.full_messages.each do |msg|
+          %li
+            = msg
+  .form-group
+    = f.text_field :title, class: 'form-control', placeholder: 'アイデア'
+  = f.submit 'アイデアを送信する', class: 'btn btn-success'
 
 %hr
 
