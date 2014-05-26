@@ -27,11 +27,14 @@ group :development, :test do
   gem "binding_of_caller"
   gem 'meta_request'
   gem 'rspec-rails', '~> 3.0.0.rc1'
+  gem 'rspec', '~> 3.0.0.rc1'
   gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 group :development do
   gem 'quiet_assets'
+  gem 'spring'
+  gem 'guard-rspec', '>= 4.2.9', require: false
 end
 
 group :test do
