@@ -6,7 +6,9 @@
 
 ## Setup for development
 
-Rename .env.example to .env and Add Twitter Consumer Keys.
+* Create a twitter app at [Twitter Application Management](https://apps.twitter.com/).
+* Input your callback url. For instance `http://debeg-idea.dev/auth/twitter/callback`.
+* Rename .env.example to .env and set `Twitter_API_KEY` and `Twitter_API_SECRET`.
 
 ```
 $ cp .env.example .env
