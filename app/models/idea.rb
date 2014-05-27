@@ -4,4 +4,9 @@ class Idea < ActiveRecord::Base
   belongs_to :user
 
   validates :title, length: { maximum: 100 }, presence: true
+
+  def created_by?(user)
+    return false unless user
+    user_id == user.id
+  end
 end

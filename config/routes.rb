@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :likes, only: :create
   end
 
-  resources :ideas, concerns: :likable, only: [:show, :create] do
+  resources :ideas, concerns: :likable, only: [:show, :create, :destroy] do
     resources :comments, concerns: :likable, only: :create
   end
 

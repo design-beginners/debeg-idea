@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :ideas
+  has_many :ideas, dependent: :destroy
 
   def self.find_or_create_from_auth_hash(auth_hash)
     provider = auth_hash[:provider]

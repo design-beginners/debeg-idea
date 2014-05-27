@@ -18,7 +18,7 @@
 
 .list-group
   - @ideas.each do |idea|
-    .list-group-item
+    = div_for(idea, class: 'list-group-item') do
       = link_to idea do
         - if idea.user.try(:image_url)
           = image_tag(idea.user.image_url, width: 30, height: 30, alt: idea.user.nickname, title: idea.user.nickname).html_safe
@@ -31,3 +31,5 @@
           = link_to 'イイネ！済み', '#', class: 'btn btn-primary btn-sm disabled'
         - elsif logged_in?
           = link_to 'イイネ！', idea_likes_path(idea), method: :post, remote: true, class: 'btn btn-primary btn-sm js-like'
+        - if idea.created_by?(current_user)
+          = link_to '削除', idea_path(idea), method: :delete, class: 'btn btn-danger', data: { confirm: '本当に削除しますか？' }
