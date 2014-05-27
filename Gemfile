@@ -21,7 +21,7 @@ gem 'newrelic_rpm'
 group :development, :test do
   gem 'sqlite3'
   gem 'dotenv-rails'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'pry-remote'
   gem 'pry-byebug'
   gem "binding_of_caller"
