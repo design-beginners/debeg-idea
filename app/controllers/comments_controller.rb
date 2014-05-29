@@ -22,7 +22,6 @@ class CommentsController < ApplicationController
                 idea.comments.where(user: current_user).find(params[:id])
               end
 
-
     comment.destroy!
     redirect_to idea_path(idea), notice: 'コメントを削除しました'
   end
