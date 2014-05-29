@@ -6,5 +6,10 @@ FactoryGirl.define do
     sequence(:uid) { |i| "uid#{i}" }
     sequence(:nickname) { |i| "nickname#{i}" }
     sequence(:image_url) { |i| "http://example.com/image#{i}.jpg"}
+    admin false
+
+    trait :admin do
+      admin true
+    end
   end
 end

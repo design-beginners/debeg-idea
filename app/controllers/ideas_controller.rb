@@ -24,7 +24,11 @@ class IdeasController < ApplicationController
   end
 
   def destroy
-    idea = current_user.ideas.find(params[:id])
+    idea = if current_user.admin?
+             Idea.find(params[:id])
+           else
+             current_user.ideas.find(params[:id])
+           end
     idea.destroy!
     redirect_to root_path, notice: 'アイデアを削除しました'
   end

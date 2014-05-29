@@ -18,7 +18,7 @@
             = link_to 'イイネ！済み', '#', class: 'btn btn-primary btn-sm disabled'
           - elsif logged_in?
             = link_to 'イイネ！', idea_comment_likes_path(@idea, comment), method: :post, remote: true, class: 'btn btn-primary btn-sm js-like'
-          - if comment.created_by?(current_user)
+          - if comment.created_by?(current_user) || current_user.try(:admin?)
             = link_to '削除', idea_comment_path(@idea, comment), method: :delete, class: 'btn btn-danger', data: { confirm: '本当に削除しますか？' }
 
 
