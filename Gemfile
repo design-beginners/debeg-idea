@@ -17,6 +17,7 @@ gem 'therubyracer'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'newrelic_rpm'
+gem 'paranoia'
 
 group :development, :test do
   gem 'sqlite3'

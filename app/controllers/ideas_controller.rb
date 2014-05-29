@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 class IdeasController < ApplicationController
+  before_action :authenticate, only: :destroy
+
   def show
     @idea = Idea.find(params[:id])
     @comments = @idea.comments
@@ -19,5 +21,15 @@ class IdeasController < ApplicationController
       @ideas = Idea.order('created_at desc')
       render 'welcome/index'
     end
+  end
+
+  def destroy
+    idea = if current_user.admin?
+             Idea.find(params[:id])
+           else
+             current_user.ideas.find(params[:id])
+           end
+    idea.destroy!
+    redirect_to root_path, notice: 'アイデアを削除しました'
   end
 end
