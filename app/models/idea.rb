@@ -1,4 +1,6 @@
 class Idea < ActiveRecord::Base
+  acts_as_paranoid
+
   has_many :likes, as: :likable
   has_many :comments
   belongs_to :user
