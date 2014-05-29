@@ -6,4 +6,9 @@ class Comment < ActiveRecord::Base
   belongs_to :user
 
   validates :body, length: { maximum: 1000 }, presence: true
+
+  def created_by?(user)
+    return false unless user
+    user_id == user.id
+  end
 end
