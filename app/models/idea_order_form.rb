@@ -14,7 +14,7 @@ LEFT OUTER JOIN likes
 on ideas.id = likes.likable_id
 SQL
       Idea.joins(join_sql).
-        where('likes.likable_type = ?', "Idea").
+        where('likes.likable_type = ?', 'Idea').
         group('ideas.id').
         order('count(likes.id) desc')
     else
