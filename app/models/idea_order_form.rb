@@ -11,12 +11,10 @@ class IdeaOrderForm
     if content == 1
       join_sql = <<SQL
 LEFT OUTER JOIN likes
-on
-ideas.id = likes.likable_id
-and
-likes.likable_type = "Idea"
+on ideas.id = likes.likable_id
 SQL
       Idea.joins(join_sql).
+        where('likes.likable_type = ?', 'Idea').
         group('ideas.id').
         order('count(likes.id) desc')
     else
