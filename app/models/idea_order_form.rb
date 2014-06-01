@@ -9,7 +9,7 @@ class IdeaOrderForm
 
   def result
     if content == 1
-      join_sql =<<SQL
+      join_sql = <<SQL
 LEFT OUTER JOIN likes
 on
 ideas.id = likes.likable_id
