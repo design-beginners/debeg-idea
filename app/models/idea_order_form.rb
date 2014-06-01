@@ -9,7 +9,16 @@ class IdeaOrderForm
 
   def result
     if content == 1
-      Idea.joins('LEFT OUTER JOIN likes on ideas.id = likes.likable_id and likes.likable_type = "Idea"').group('ideas.id').order('count(likes.id) desc')
+      join_sql =<<SQL
+LEFT OUTER JOIN likes
+on
+ideas.id = likes.likable_id
+and
+likes.likable_type = "Idea"
+SQL
+      Idea.joins(join_sql).
+        group('ideas.id').
+        order('count(likes.id) desc')
     else
       Idea.order('created_at desc')
     end

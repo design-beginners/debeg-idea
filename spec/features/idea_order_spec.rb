@@ -19,7 +19,7 @@ describe 'イイネ！が多いアイデアを見たいので、イイネ！順�
     end
 
     it '作成日順にアイデアが表示されていること' do
-      idea_ary = page.all('.idea a').map { |i| i.text.gsub(/\s/, "") }
+      idea_ary = page.all('.idea a').map { |i| i.text.gsub(/\s/, '') }
       expect(idea_ary).to eq %w(hoge fuga foo)
     end
 
@@ -27,7 +27,7 @@ describe 'イイネ！が多いアイデアを見たいので、イイネ！順�
       before { select 'イイネ順', from: 'idea_order_form_content' }
 
       it 'イイネ順にアイデアが表示されていること' do
-        idea_ary = page.all('.idea a').map { |i| i.text.gsub(/\s/, "") }
+        idea_ary = page.all('.idea a').map { |i| i.text.gsub(/\s/, '') }
         expect(idea_ary).to eq %w(fuga foo hoge)
       end
     end
