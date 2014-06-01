@@ -3,6 +3,9 @@
   %p
     デザインビギナーズのミートアップでやりたいことをたくさん集めるサイトです。デザイン関連で勉強したいことを「アイデア」として追加して、参考になる情報(ブログのエントリや書籍の情報など)をコメントで追加します。
 
+= form_for @q, url: root_path, method: :get do |f|
+  = f.select :content, [['作成日順', '0'], ['イイネ順', '1']], {}, { class: 'form-control' }
+
 = form_for @idea do |f|
   - if @idea.errors.any?
     .alert.alert-danger
