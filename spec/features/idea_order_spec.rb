@@ -27,6 +27,7 @@ describe 'イイネ！が多いアイデアを見たいので、イイネ！順�
       before { select 'イイネ順', from: 'idea_order_form_content' }
 
       it 'イイネ順にアイデアが表示されていること' do
+        sleep 1
         idea_ary = page.all('.idea a').map { |i| i.text.gsub(/\s/, '') }
         expect(idea_ary).to eq %w(fuga foo hoge)
       end
