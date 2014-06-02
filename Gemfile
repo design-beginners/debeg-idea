@@ -27,8 +27,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem "binding_of_caller"
   gem 'meta_request'
-  gem 'rspec-rails', '~> 3.0.0.rc1'
-  gem 'rspec', '~> 3.0.0.rc1'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec', '~> 3.0.0'
   gem 'factory_girl_rails', '~> 4.4.1'
 end
 
