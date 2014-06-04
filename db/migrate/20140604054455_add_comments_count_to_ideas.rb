@@ -5,7 +5,7 @@ class AddCommentsCountToIdeas < ActiveRecord::Migration
     reversible do |dir|
       dir.up do
         Idea.all.each do |idea|
-          idea.update!(comments_count: idea.comments.count)
+          Idea.reset_counters(idea.id, :comments)
         end
       end
     end
