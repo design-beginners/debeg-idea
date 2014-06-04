@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529074940) do
+ActiveRecord::Schema.define(version: 20140604054455) do
 
   create_table "comments", force: true do |t|
     t.integer  "idea_id"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140529074940) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.datetime "deleted_at"
+    t.integer  "comments_count", default: 0
   end
 
   add_index "ideas", ["deleted_at"], name: "index_ideas_on_deleted_at"
