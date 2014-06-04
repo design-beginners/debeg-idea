@@ -29,6 +29,7 @@
         - else
           = idea.title
       .pull-right
+        コメント: #{idea.comments_count}
         イイネ！: #{idea.likes.count}
         - if logged_in? && idea.likes.exists?(user: current_user)
           = link_to 'イイネ！済み', '#', class: 'btn btn-primary btn-sm disabled'
