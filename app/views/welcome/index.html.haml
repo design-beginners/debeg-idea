@@ -1,7 +1,9 @@
-%h1 デザインビギナーズのアイデア帳
-.jumbotron
-  %p
-    デザインビギナーズのミートアップでやりたいことをたくさん集めるサイトです。デザイン関連で勉強したいことを「アイデア」として追加して、参考になる情報(ブログのエントリや書籍の情報など)をコメントで追加します。
+- content_for :top do
+  #eyecatch
+    .container
+      = image_tag 'debeg_logo212x162.png', class: 'center-block'
+      %p
+        デザインビギナーズのミートアップでやりたいことをたくさん集めるサイトです。デザイン関連で勉強したいことを「アイデア」として追加して、参考になる情報(ブログのエントリや書籍の情報など)をコメントで追加します。
 
 = form_for @q, url: root_path, method: :get do |f|
   = f.select :content, [['作成日順', '0'], ['イイネ順', '1']], {}, { class: 'form-control' }

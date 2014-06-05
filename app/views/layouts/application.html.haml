@@ -8,21 +8,25 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    %header.navbar.navbar-default{:role => "navigation"}
+    %header.navbar.navbar-default#topbar{:role => "navigation"}
       .container
         .navbar-header
-          = link_to 'Design Beginners', root_path, class: 'navbar-brand'
+          = link_to 'デザインビギナーズのアイデア帳', root_path, class: 'navbar-brand'
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             - if logged_in?
               %li= link_to 'ログアウト', logout_path
             - else
               %li= link_to 'Twitterでログイン', '/auth/twitter'
-    .container
-      - if flash[:notice]
-        .alert.alert-success
+    - if flash[:notice]
+      .alert.alert-success
+        .container
           = flash[:notice]
-      - if flash[:alert]
-        .alert.alert-danger
+    - if flash[:alert]
+      .alert.alert-danger
+        .container
           = flash[:alert]
+    - if content_for?(:top)
+      = yield(:top)
+    .container
       = yield
