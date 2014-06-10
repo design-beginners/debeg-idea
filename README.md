@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/design-beginners/debeg-idea.png?label=ready&title=Ready)](https://waffle.io/design-beginners/debeg-idea)
 # デザインビギナーズのアイデア帳
 
 [![Build Status](https://travis-ci.org/design-beginners/debeg-idea.svg?branch=master)](https://travis-ci.org/design-beginners/debeg-idea)
