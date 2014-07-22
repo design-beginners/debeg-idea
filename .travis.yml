@@ -1,18 +1,20 @@
 language: ruby
 rvm:
-  - 2.1.2
+- 2.1.2
 deploy:
   provider: heroku
   api_key:
     secure: XMsvlG8qX6DB5zoKEHFcHoUb1VGobc7qz3GuMcsecTjWtOFlc9r06YA9Nmgotk7yv+Bm5SkqxT71qbJI5jpZmdAEsul4p6WfZzBkLDNp2vM0P9z3b/NueteS1tR+/F9UpAssLJGAu7qY3mN28rFsPUD/Yl0kMbmLy68qLnb4EZU=
   run:
-    - 'rake db:migrate'
+  - rake db:migrate
   app: debeg-idea
   on:
     repo: design-beginners/debeg-idea
 notifications:
   webhooks:
-    - https://idobata.io/hook/8da3a2e8-1328-4454-9cef-282a19de288d
+  - https://idobata.io/hook/8da3a2e8-1328-4454-9cef-282a19de288d
 addons:
   code_climate:
-    repo_token: bcf65bdc65bcf5c51a8d44e9810468439e7e174e9d2c7e37d090d1e94be63502 
+    repo_token: bcf65bdc65bcf5c51a8d44e9810468439e7e174e9d2c7e37d090d1e94be63502
+dd:
+  secure: Tv342/T/Nx/XmyKHZ5zRoLFBpjgbCoUKLv2uhIUXjScdSfOLnLuR+yqRFHEy+I4lsUu5pX4IwbsBJJzmc2Z6byp15fTgWxCDNUGZAtXcc+5SyVvBN4Hi2UajJWUgrZ9LplwqD2DJjzyqygbbTU4agOx/VLsKLh5mU4iv0++x7JQ=
