@@ -18,6 +18,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'newrelic_rpm'
 gem 'paranoia'
+gem 'pronto-rubocop'
 
 group :development, :test do
   gem 'sqlite3'
