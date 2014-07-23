@@ -21,4 +21,4 @@ env:
     - secure: "GvkLAdRPrQOLg5jMFoN4ftes22lGW1m2+uHIG1jucbG0XIHqnFQ6fpzF0XoZlJaFIyPtR4bW4xFjNElrkYvBMN8ccqZpdoGKeYRSKgA/yPszrnSX/GJGLvcziijMI6IMS61J0dnLX0GkT3Iqs3zjyupVbJoOuk0Q6Y/IU6ASQAQ="
 before_script:
   - git fetch origin master
-  - bundle exec pronto run -c origin/master -f github
+  - bundle exec pronto run -c FETCH_HEAD -f github
