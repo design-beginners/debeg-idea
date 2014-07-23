@@ -18,3 +18,6 @@ addons:
     repo_token: bcf65bdc65bcf5c51a8d44e9810468439e7e174e9d2c7e37d090d1e94be63502
 dd:
   secure: Tv342/T/Nx/XmyKHZ5zRoLFBpjgbCoUKLv2uhIUXjScdSfOLnLuR+yqRFHEy+I4lsUu5pX4IwbsBJJzmc2Z6byp15fTgWxCDNUGZAtXcc+5SyVvBN4Hi2UajJWUgrZ9LplwqD2DJjzyqygbbTU4agOx/VLsKLh5mU4iv0++x7JQ=
+
+before_script:
+  - bundle exec pronto run -f github
