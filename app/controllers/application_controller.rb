@@ -21,7 +21,6 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, alert: 'ログインしてください'
   end
 
-
   def error404
     render 'error404', status: 404, formats: [:html]
   end
