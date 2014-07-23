@@ -179,9 +179,6 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     polyglot (0.3.5)
-    poper (0.0.3)
-      rugged (~> 0.19.0)
-      thor (~> 0.18.0)
     posix-spawn (0.3.8)
     powerpack (0.0.9)
     pronto (0.2.5)
@@ -194,9 +191,6 @@ GEM
       pronto (~> 0.2.0)
     pronto-flay (0.2.0)
       flay (~> 2.4.0)
-      pronto (~> 0.2.0)
-    pronto-poper (0.2.0)
-      poper (~> 0.0.1)
       pronto (~> 0.2.0)
     pronto-rails_best_practices (0.2.0)
       pronto (~> 0.2.0)
@@ -381,7 +375,6 @@ DEPENDENCIES
   poltergeist
   pronto-brakeman
   pronto-flay
-  pronto-poper
   pronto-rails_best_practices
   pronto-reek
   pronto-rubocop

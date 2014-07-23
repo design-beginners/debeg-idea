@@ -20,7 +20,6 @@ gem 'paranoia'
 gem 'pronto-rubocop'
 gem 'pronto-brakeman'
 gem 'pronto-rails_best_practices'
-gem 'pronto-poper'
 gem 'pronto-reek'
 gem 'pronto-flay'
 
