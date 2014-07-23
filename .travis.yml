@@ -20,4 +20,5 @@ dd:
   secure: Tv342/T/Nx/XmyKHZ5zRoLFBpjgbCoUKLv2uhIUXjScdSfOLnLuR+yqRFHEy+I4lsUu5pX4IwbsBJJzmc2Z6byp15fTgWxCDNUGZAtXcc+5SyVvBN4Hi2UajJWUgrZ9LplwqD2DJjzyqygbbTU4agOx/VLsKLh5mU4iv0++x7JQ=
 
 before_script:
-  - bundle exec pronto run -f github
+  - git fetch origin master
+  - bundle exec pronto run -c origin/master -f github
