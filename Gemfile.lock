@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/mmozuras/pronto-rubocop.git
-  revision: 1e49395184761f78fc4dd515badc0a28098e5440
-  specs:
-    pronto-rubocop (0.2.5)
-      pronto (~> 0.2, >= 0.2.0)
-      rubocop (~> 0.24.0)
-
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -104,8 +96,6 @@ GEM
       multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
     ffi (1.9.3)
-    ffi-aspell (0.0.3)
-      ffi (>= 1.0.11)
     flay (2.4.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
@@ -123,12 +113,8 @@ GEM
     guard-rspec (4.2.10)
       guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
-    haml (4.1.0.beta.1)
+    haml (4.0.5)
       tilt
-    haml-lint (0.6.0)
-      haml (~> 4.0)
-      rubocop (>= 0.24.1)
-      sysexits (~> 1.1)
     haml-rails (0.5.3)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
@@ -183,7 +169,7 @@ GEM
       omniauth-oauth (~> 1.0)
     paranoia (2.0.2)
       activerecord (~> 4.0)
-    parser (2.2.0.pre.3)
+    parser (2.1.9)
       ast (>= 1.1, < 3.0)
       slop (~> 3.4, >= 3.4.5)
     pg (0.17.1)
@@ -209,9 +195,6 @@ GEM
     pronto-flay (0.2.0)
       flay (~> 2.4.0)
       pronto (~> 0.2.0)
-    pronto-haml (0.2.0)
-      haml-lint (~> 0.6.0, >= 0.6.0)
-      pronto (~> 0.2, >= 0.2.0)
     pronto-poper (0.2.0)
       poper (~> 0.0.1)
       pronto (~> 0.2.0)
@@ -221,9 +204,9 @@ GEM
     pronto-reek (0.2.1)
       pronto (~> 0.2.0)
       reek (~> 1.3.6)
-    pronto-spell (0.2.0)
-      ffi-aspell (~> 0.0.3)
+    pronto-rubocop (0.2.5)
       pronto (~> 0.2.0)
+      rubocop (~> 0.23.0)
     pry (0.10.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -304,9 +287,9 @@ GEM
       rspec-mocks (~> 3.0.0)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.3)
-    rubocop (0.24.1)
+    rubocop (0.23.0)
       json (>= 1.7.7, < 2)
-      parser (>= 2.2.0.pre.3, < 3.0)
+      parser (~> 2.1.9)
       powerpack (~> 0.0.6)
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
@@ -349,7 +332,6 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
-    sysexits (1.1.0)
     temple (0.6.8)
     terminal-table (1.4.5)
     therubyracer (0.12.1)
@@ -399,12 +381,10 @@ DEPENDENCIES
   poltergeist
   pronto-brakeman
   pronto-flay
-  pronto-haml
   pronto-poper
   pronto-rails_best_practices
   pronto-reek
-  pronto-rubocop!
-  pronto-spell
+  pronto-rubocop
   pry-byebug
   pry-rails
   pry-remote
