@@ -1,17 +1,15 @@
 %h1
-  = @idea.title
-
+  = auto_link(@idea.title)
 %hr
-
 - if @comments.present?
   .list-group
     - @comments.select(&:persisted?).each do |comment|
       = div_for(comment, class: 'list-group-item') do
         - if comment.user.try(:image_url)
           = image_tag(comment.user.image_url, width: 30, height: 30, alt: comment.user.nickname, title: comment.user.nickname).html_safe
-          = comment.body
+          = auto_link(comment.body)
         - else
-          = comment.body
+          = auto_link(comment.body)
         .pull-right
           イイネ！: #{comment.likes.count}
           - if logged_in? && comment.likes.exists?(user: current_user)
