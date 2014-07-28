@@ -11,7 +11,8 @@
         - else
           = auto_link(comment.body)
         .pull-right
-          イイネ！: #{comment.likes.count}
+          %i.glyphicon.glyphicon-thumbs-up
+          = comment.likes.count
           - if logged_in? && comment.likes.exists?(user: current_user)
             = link_to 'イイネ！済み', '#', class: 'btn btn-primary btn-sm disabled'
           - elsif logged_in?
