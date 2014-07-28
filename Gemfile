@@ -22,6 +22,7 @@ gem 'pronto-brakeman'
 gem 'pronto-rails_best_practices'
 gem 'pronto-reek'
 gem 'pronto-flay'
+gem 'rails_autolink'
 
 group :development, :test do
   gem 'sqlite3'
