@@ -1,0 +1,12 @@
+defaults: &defaults
+  none: 'none'
+
+development:
+  <<: *defaults
+  idobata_uri: 'https://idobata.io/hook/generic/92b1ba2a-80d2-4885-a056-80d1a6292a14'
+test:
+  <<: *defaults
+  idobata_uri: 'https://idobata.io/hook/generic/92b1ba2a-80d2-4885-a056-80d1a6292a14'
+production:
+  <<: *defaults
+  idobata_uri: 'https://idobata.io/hook/generic/ff5734c7-fb93-4085-87ae-ab58af06cb22'
