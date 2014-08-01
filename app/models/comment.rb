@@ -18,7 +18,7 @@ class Comment < ActiveRecord::Base
     message = "@#{user.nickname} created comment to #{idea.title}: #{body}"
 
     Net::HTTP.post_form(URI.parse(Settings.idobata_uri), source: message)
-  rescue => e
-    logger.error [e, *e.backtrace].join("\n")
+  rescue => error
+    logger.error [error, *error.backtrace].join("\n")
   end
 end

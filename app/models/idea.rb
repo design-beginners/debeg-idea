@@ -21,7 +21,7 @@ class Idea < ActiveRecord::Base
                 "Someone created idea!: #{title}"
               end
     Net::HTTP.post_form(URI.parse(Settings.idobata_uri), source: message)
-  rescue => e
-    logger.error [e, *e.backtrace].join("\n")
+  rescue => error
+    logger.error [error, *error.backtrace].join("\n")
   end
 end

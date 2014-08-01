@@ -1,5 +1,6 @@
 Documentation:
   Enabled: false
+
 AllCops:
   Include:
     - '**/Rakefile'
@@ -8,4 +9,5 @@ AllCops:
     - 'db/**/*'
     - 'config/**/*'
     - 'vendor/bundle/**/*'
+    - 'bin/*'
     - 'exec/*'
