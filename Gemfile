@@ -23,6 +23,7 @@ gem 'pronto-rails_best_practices'
 gem 'pronto-reek'
 gem 'pronto-flay'
 gem 'rails_autolink'
+gem 'settingslogic'
 
 group :development, :test do
   gem 'sqlite3'

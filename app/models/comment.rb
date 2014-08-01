@@ -7,8 +7,18 @@ class Comment < ActiveRecord::Base
 
   validates :body, length: { maximum: 1000 }, presence: true
 
+  after_save :notify_to_idobata, unless: proc { Rails.env.test? }
+
   def created_by?(user)
     return false unless user
     user_id == user.id
+  end
+
+  def notify_to_idobata
+    message = "@#{user.nickname} created comment to #{idea.title}: #{body}"
+
+    Net::HTTP.post_form(URI.parse(Settings.idobata_uri), source: message)
+  rescue => error
+    logger.error [error, *error.backtrace].join("\n")
   end
 end
