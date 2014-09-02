@@ -356,6 +356,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   binding_of_caller
   bootstrap-sass
   capybara
