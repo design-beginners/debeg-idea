@@ -1,15 +1,15 @@
-ruby '2.1.2'
+ruby '2.1.5'
 
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'rails', '4.1.5'
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'rails', '4.1.7'
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'therubyracer'
@@ -33,9 +33,9 @@ group :development, :test do
   gem 'pry-byebug'
   gem "binding_of_caller"
   gem 'meta_request'
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'rspec', '~> 3.0.0'
-  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'rspec-rails'
+  gem 'rspec'
+  gem 'factory_girl_rails'
   gem 'awesome_print'
 end
 
@@ -46,7 +46,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers', '~> 2.6.0'
+  gem 'shoulda-matchers'
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_rewinder'
