@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'rails', '4.1.7'
+gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
