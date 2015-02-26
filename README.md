@@ -5,6 +5,8 @@
 [![Dependency Status](https://gemnasium.com/design-beginners/debeg-idea.svg)](https://gemnasium.com/design-beginners/debeg-idea)
 [![Stories in Ready](https://badge.waffle.io/design-beginners/debeg-idea.png?label=ready&title=Ready)](https://waffle.io/design-beginners/debeg-idea)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## Setup for development
 
 * Create a twitter app at [Twitter Application Management](https://apps.twitter.com/).
