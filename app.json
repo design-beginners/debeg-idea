@@ -6,10 +6,10 @@
             "generator": "secret"
         },
         "TWITTER_API_KEY": {
-            "description": "twitter api key",
+            "description": "twitter api key"
         },
         "TWITTER_API_SECRET": {
-            "description": "twitter api secret",
+            "description": "twitter api secret"
         }
     }
 }
