@@ -1,9 +1,8 @@
-ruby '2.1.5'
+ruby '2.2.3'
 
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
-gem 'rails', '4.1.7'
+gem 'rails', '4.1.13'
 gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
